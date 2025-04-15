@@ -18,7 +18,9 @@
   },
   "scripts": {
     "dev": "bun i && bun scripts/init-husky.ts && bun --watch src/index.ts",
-    "playwrite": "bunx show-report --host 0.0.0.0",
+    "test": "",
+    "playwrite": "bunx playwright test",
+    "playwrite:report": "bunx show-report --host 0.0.0.0",
     "prepare": "husky"
   }
 }
