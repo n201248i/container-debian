@@ -4,14 +4,18 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@eslint/js": "latest",
+    "@eslint/css": "^0.6.0",
+    "@eslint/js": "^9.24.0",
+    "@eslint/json": "^0.11.0",
+    "@eslint/markdown": "^6.3.0",
     "@playwright/test": "latest",
     "@types/bun": "latest",
     "@types/node": "latest",
-    "eslint": "latest",
-    "eslint-plugin-react": "latest",
+    "eslint": "^9.24.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.0.0",
     "husky": "latest",
-    "typescript-eslint": "latest"
+    "typescript-eslint": "^8.30.1"
   },
   "peerDependencies": {
     "typescript": "latest"
@@ -20,7 +24,7 @@
     "dev": "bun i && bun scripts/init-husky.ts && bun --watch src/index.ts",
     "test": "",
     "playwrite": "bunx playwright test",
-    "playwrite:report": "bunx show-report --host 0.0.0.0",
+    "show-report": "bunx show-report --host 0.0.0.0",
     "prepare": "husky"
   }
 }

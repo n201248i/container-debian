@@ -16,7 +16,8 @@
 				"dbaeumer.vscode-eslint",
 				"ms-azuretools.vscode-docker",
 				"oven.bun-vscode",
-				"mhutchie.git-graph"
+				"mhutchie.git-graph",
+				"ms-playwright.playwright"
 			]
 		}
 	},

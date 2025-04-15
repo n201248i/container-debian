@@ -10,6 +10,8 @@
     "git.confirmSync": false,
     "git.ignoreRebaseWarning": true,
     "editor.scrollBeyondLastLine": false,
+    "editor.smoothScrolling": true,
+    "explorer.compactFolders": false,
     "javascript.suggest.completeJSDocs": false,
     "typescript.suggest.completeJSDocs": false,
     "javascript.suggest.jsdoc.generateReturns": false,
