@@ -39,4 +39,6 @@ message = message.replace(/\s+/g, ' ')
 
 const commit_message_file = process.argv[2]
 
+process.exit(0)
+
 writeFileSync(commit_message_file, message)
