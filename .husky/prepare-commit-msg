@@ -1,0 +1,3 @@
+echo "Running prepare-commit-msg hook"
+echo "Args: $1 $2 $3"
+bun .husky/prepare-commit-msg.ts "$1" "$2" "$3"
