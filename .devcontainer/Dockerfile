@@ -1,21 +1,24 @@
 FROM oven/bun:debian
 
+WORKDIR /workspaces
+
+RUN chmod -R 755 /workspaces
+
 RUN apt update && apt-get install -y \
     curl \
     lsb-release \
     git \
     unzip \
     && rm -rf /var/lib/apt/lists/*
+    
+RUN bun upgrade
 
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/*
 
-RUN npx playwright install-deps
+RUN bunx playwright install-deps
 
-RUN npx playwright install   
-
-WORKDIR /workspaces
-RUN chmod -R 755 /workspaces
+RUN bunx playwright install
 
 CMD ["bash"] 

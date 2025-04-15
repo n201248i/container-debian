@@ -1,20 +1,24 @@
 {
   "name": "container-debian",
-  "module": "index.ts",
+  "module": "src/index.ts",
   "type": "module",
   "private": true,
-  
   "devDependencies": {
     "@eslint/js": "latest",
-    "@playwright/test": "^1.51.1",
+    "@playwright/test": "latest",
     "@types/bun": "latest",
     "@types/node": "latest",
     "eslint": "latest",
     "eslint-plugin-react": "latest",
+    "husky": "latest",
     "typescript-eslint": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "latest"
   },
-  "scripts": {}
+  "scripts": {
+    "dev": "bun i && bun scripts/init-husky.ts && bun --watch src/index.ts",
+    "playwrite": "bunx show-report --host 0.0.0.0",
+    "prepare": "husky"
+  }
 }

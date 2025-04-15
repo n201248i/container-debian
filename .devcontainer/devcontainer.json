@@ -3,7 +3,7 @@
 {
 	"name": "Debian",
 	"build": {
-		"dockerfile": "../Dockerfile"
+		"dockerfile": "./Dockerfile"
 	},
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -24,8 +24,5 @@
 	// "remoteUser": "root",
 	"mounts": [
 		"source=${localEnv:HOME}/.ssh,target=/root/.ssh,type=bind,consistency=cached"
-	],
-	"forwardPorts": [
-		9323
 	]
 }
