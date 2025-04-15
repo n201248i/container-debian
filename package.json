@@ -1,0 +1,20 @@
+{
+  "name": "container-debian",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  
+  "devDependencies": {
+    "@eslint/js": "latest",
+    "@playwright/test": "^1.51.1",
+    "@types/bun": "latest",
+    "@types/node": "latest",
+    "eslint": "latest",
+    "eslint-plugin-react": "latest",
+    "typescript-eslint": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {}
+}
