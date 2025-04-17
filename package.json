@@ -9,9 +9,12 @@
     "@eslint/json": "^0.11.0",
     "@eslint/markdown": "^6.3.0",
     "@playwright/test": "latest",
-    "@types/bun": "latest",
-    "@types/node": "latest",
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "@stylistic/eslint-plugin-js": "^4.2.0",
+    "@types/bun": "^1.2.9",
+    "@types/node": "^22.14.1",
     "eslint": "^9.24.0",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.0.0",
     "husky": "latest",
@@ -21,10 +24,15 @@
     "typescript": "latest"
   },
   "scripts": {
-    "dev": "bun i && bun scripts/init-husky.ts && bun --watch src/index.ts",
-    "test": "",
-    "playwrite": "bunx playwright test",
-    "show-report": "bunx show-report --host 0.0.0.0",
-    "prepare": "husky"
+    "dev": "bun i && bun lint:fix && bun --watch src/index.ts",
+    "pw:test": "bunx playwright test __spec__",
+    "pw:report": "bunx show-report --host 0.0.0.0",
+    "prepare": "husky",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' 'scripts/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{js,ts,tsx}' 'scripts/**/*.{js,ts,tsx}' --fix"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }

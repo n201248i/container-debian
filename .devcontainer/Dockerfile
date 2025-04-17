@@ -1,16 +1,18 @@
-FROM oven/bun:debian
+FROM mcr.microsoft.com/playwright
+# FROM oven/bun:debian
 
-WORKDIR /workspaces
+WORKDIR /app
 
-RUN chmod -R 755 /workspaces
+RUN chmod -R 755 /app
 
 RUN apt update && apt-get install -y \
     curl \
     lsb-release \
     git \
-    unzip \
-    && rm -rf /var/lib/apt/lists/*
-    
+    unzip
+
+RUN curl -fsSL https://bun.sh/install | bash
+ENV PATH=$PATH:/root/.bun/bin
 RUN bun upgrade
 
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \

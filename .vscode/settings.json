@@ -30,4 +30,5 @@
     "editor.minimap.enabled": false,
     "typescript.updateImportsOnFileMove.enabled": "always",
     "editor.dropIntoEditor.preferences": [],
+    "playwright.testFiles": "**/*.e2e.ts"
 }

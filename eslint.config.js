@@ -6,10 +6,11 @@ import json from '@eslint/json'
 import markdown from '@eslint/markdown'
 import css from '@eslint/css'
 import { defineConfig } from 'eslint/config'
+import stylistic from '@stylistic/eslint-plugin'
 
 export default defineConfig([
 	{ files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
-	{ files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'], languageOptions: { globals: {...globals.browser, ...globals.node} } },
+	{ files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'], languageOptions: { globals: { ...globals.browser, ...globals.node } } },
 	{ files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'], plugins: { js }, extends: ['js/recommended'] },
 	{ files: ['**/*.md'], plugins: { markdown }, language: 'markdown/gfm', extends: ['markdown/recommended'] },
 	{ files: ['**/*.css'], plugins: { css }, language: 'css/css', extends: ['css/recommended'] },
@@ -37,9 +38,11 @@ export default defineConfig([
 	},
 	{ 
 		files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'], 
-		rules: { 
+		rules: {
 			'semi': ['error', 'never'],
 			'quotes': ['warn', 'single'],
+			'object-curly-spacing': ['error', 'always'],
+			'array-bracket-spacing': ['error', 'never'],
 			'max-statements': ['warn', 10],
 			'indent': ['error', 'tab'],
 			'no-unused-vars': 'off',
