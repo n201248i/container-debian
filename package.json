@@ -26,6 +26,7 @@
   "scripts": {
     "start": "bun run src/index.ts",
     "dev": "bun i && bun lint:fix && bun --watch src/index.ts",
+    "test": "",
     "pw:test": "bunx playwright test __spec__",
     "pw:report": "bunx show-report --host 0.0.0.0",
     "prepare": "husky",
