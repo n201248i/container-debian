@@ -24,12 +24,13 @@
     "typescript": "latest"
   },
   "scripts": {
+    "start": "bun run src/index.ts",
     "dev": "bun i && bun lint:fix && bun --watch src/index.ts",
     "pw:test": "bunx playwright test __spec__",
     "pw:report": "bunx show-report --host 0.0.0.0",
     "prepare": "husky",
-    "lint": "eslint 'src/**/*.{js,ts,tsx}' 'scripts/**/*.{js,ts,tsx}'",
-    "lint:fix": "eslint 'src/**/*.{js,ts,tsx}' 'scripts/**/*.{js,ts,tsx}' --fix"
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' 'scripts/**/*.{js,ts}' '__spec__/**/*.{js,ts}' '__test__/**/*.{js,ts}'",
+    "lint:fix": "eslint 'src/**/*.{js,ts,tsx}' 'scripts/**/*.{js,ts}' '__spec__/**/*.{js,ts}' '__test__/**/*.{js,ts}' --fix"
   },
   "dependencies": {
     "react": "^19.1.0",
